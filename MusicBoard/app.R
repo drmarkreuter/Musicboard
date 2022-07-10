@@ -1,7 +1,12 @@
+##Mark Reuter
+##A small Web app for Ring Around the Moon music
+
 library(shiny)
 library(shinythemes)
 
-# Define UI for application that draws a histogram
+##deploy url: https://abominable.shinyapps.io/MusicBoard/
+
+
 ui <- navbarPage(theme = shinytheme("slate"),
                  HTML("<h2>Musicboard - Ring Around the Moon</h2>"),
                  tabPanel(HTML("<h3>Library</h3>"),
@@ -96,8 +101,8 @@ ui <- navbarPage(theme = shinytheme("slate"),
                                                
                                                HTML("<h3>Naked Tango - Slaughterhouse Dance Scene</h3>"),
                                                uiOutput("nakedTango"),
-                                               hr(),
                                                HTML('<a href="https://www.imdb.com/title/tt0100222/" target="_blank">Naked Tango on IMDB</a>'),
+                                               hr(),
                                                
                                                HTML("<h3>Gotan Project - La Revancha Del Tango (Full Album)</h3>"),
                                                uiOutput("gotan"),
