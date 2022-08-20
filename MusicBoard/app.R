@@ -66,22 +66,35 @@ ui <- navbarPage(theme = shinytheme("slate"),
                                                hr()
                                                
                                       ),
+                                      #### Post Modern Jukebox ####
                                       tabPanel(tags$h3("Post Modern Jukebox"),
                                                HTML("<h3>Bad Guy by Post Modern Jukebox</h3>"),
                                                uiOutput("badguy"),
+                                               uiOutput("badguyaudio"),
                                                hr(),
                                                HTML("<h3>Bad Romance by Post Modern Jukebox</h3>"),
                                                uiOutput("badRomance"),
+                                               uiOutput("badromanceaudio"),
                                                hr(),
                                                HTML("<h3>Smooth Criminal by Post Modern Jukebox</h3>"),
                                                uiOutput("smoothCriminal"),
+                                               uiOutput("smoothcriminalaudio"),
                                                hr(),
                                                HTML("<h3>Gansta Paradise by Post Modern Jukebox</h3>"),
                                                uiOutput("ganstaParadise"),
+                                               uiOutput("gangstasaudio"),
                                                hr(),
-                                               
+                                               HTML("<h3>Beautiful by Post Modern Jukebox</h3>"),
+                                               uiOutput("beautifulaudio"),
+                                               hr(),
+                                               HTML("<h3>Dancing Queen by Post Modern Jukebox</h3>"),
+                                               uiOutput("dancingqueenaudio"),
+                                               hr(),
+                                               HTML("<h3>Dancing Wtith Myself by Post Modern Jukebox</h3>"),
+                                               uiOutput("dancingwithmyselfaudio"),
+                                               hr()
                                                ),
-                                      
+                                      #### YouTube Assorted GUI ####
                                       tabPanel(tags$h3("YouTube - assorted"),
                                                HTML("<h3>Django Reinhardt - The Best Of Django Reinhardt</h3>"),
                                                uiOutput("django1"),
@@ -101,18 +114,105 @@ ui <- navbarPage(theme = shinytheme("slate"),
                                                
                                                HTML("<h3>Naked Tango - Slaughterhouse Dance Scene</h3>"),
                                                uiOutput("nakedTango"),
+                                               uiOutput("nakenTangoAudio"),
                                                HTML('<a href="https://www.imdb.com/title/tt0100222/" target="_blank">Naked Tango on IMDB</a>'),
                                                hr(),
                                                
                                                HTML("<h3>Gotan Project - La Revancha Del Tango (Full Album)</h3>"),
                                                uiOutput("gotan"),
                                                hr(),
-                                               )
+                                               
+                                               HTML("<h3>Josephine Baker dancing the original charleston</h3>"),
+                                               uiOutput("josephonebaker1"),
+                                               hr(),
+                                               
+                                               HTML("<h3>Joséphine Baker - Paris, Paris, Paris</h3>"),
+                                               uiOutput("josephonebaker2"),
+                                               hr(),
+                                               
+                                               HTML("<h3>Best of Joséphine Baker (full album)</h3>"),
+                                               uiOutput("josephonebaker3"),
+                                               hr(),
+                                               ),
+                                      #### Paris Tango GUI ####
+                                      tabPanel(tags$h3("Paris Tango"),
+                                               fluidRow(
+                                                   column(6,
+                                                          HTML("<h3>Paris Tango 2</h3>"),
+                                                          uiOutput("paristango2"),
+                                                          hr(),
+                                                          HTML("<h3>Paris Tango 3</h3>"),
+                                                          uiOutput("paristango3"),
+                                                          hr(),
+                                                          HTML("<h3>Paris Tango 4</h3>"),
+                                                          uiOutput("paristango4"),
+                                                          hr(),
+                                                          HTML("<h3>Paris Tango 5</h3>"),
+                                                          uiOutput("paristango5"),
+                                                          hr(),
+                                                          HTML("<h3>Paris Tango 6</h3>"),
+                                                          uiOutput("paristango6"),
+                                                          hr(),
+                                                          HTML("<h3>Paris Tango 7</h3>"),
+                                                          uiOutput("paristango7"),
+                                                          hr(),
+                                                          HTML("<h3>Paris Tango 8</h3>"),
+                                                          uiOutput("paristango8"),
+                                                          hr(),
+                                                          
+                                                          
+                                                   ),
+                                                   column(6,
+                                                          HTML("<h3>Paris Tango 9</h3>"),
+                                                          uiOutput("paristango9"),
+                                                          hr(),
+                                                          HTML("<h3>Paris Tango 10</h3>"),
+                                                          uiOutput("paristango10"),
+                                                          hr(),
+                                                          HTML("<h3>Paris Tango 11</h3>"),
+                                                          uiOutput("paristango11"),
+                                                          hr(),
+                                                          HTML("<h3>Paris Tango 12</h3>"),
+                                                          uiOutput("paristango12"),
+                                                          hr(),
+                                                          HTML("<h3>Paris Tango 13***</h3>"),
+                                                          uiOutput("paristango13"),
+                                                          hr(),
+                                                          HTML("<h3>Paris Tango 14</h3>"),
+                                                          uiOutput("paristango14"),
+                                                          hr(),
+                                                          HTML("<h3>Paris Tango 15</h3>"),
+                                                          uiOutput("paristango15"),
+                                                          hr(),
+                                                          
+                                                   )
+                                               )#fluidRow end
+                                               
+                                      ),#tab panel end
+                                      #### Producion Tracks GUI ####
+                                      tabPanel(tags$h3("Production Tracks"),
+                                               fluidRow(
+                                                   column(6,
+                                                          HTML("<h3>title</h3>"),
+                                                          uiOutput("pffgd"),
+                                                          hr()
+                                                   ),
+                                                   column(6,
+                                                          HTML("<h3>title</h3>"),
+                                                          uiOutput("fglkjsl"),
+                                                          hr()
+                                                          
+                                                   )
+                                               )#fluidRow end
+                                               
+                                      )#tab panel end
+                                      
                                       
                                       
                                       
                           )#end of tabsetpanel
                  ),#Library tabpanel end
+                 #### original music GUI ####
                  tabPanel(HTML("<h3>Original Music</h3>"),
                           HTML("<h3>Demo 1</h3>"),
                           uiOutput("demo1"),
@@ -122,6 +222,18 @@ ui <- navbarPage(theme = shinytheme("slate"),
                           hr(),
                           HTML("<h3>Demo 2</h3>"),
                           uiOutput("demo2"),
+                          hr(),
+                          HTML("<h3>Demo 3</h3>"),
+                          uiOutput("demo3"),
+                          hr(),
+                          HTML("<h3>Demo 3 - piano mix</h3>"),
+                          uiOutput("demo3b"),
+                          hr(),
+                          HTML("<h3>Demo 4</h3>"),
+                          uiOutput("demo4"),
+                          hr(),
+                          HTML("<h3>Demo 5</h3>"),
+                          uiOutput("demo5"),
                           hr()
                           
                           
@@ -210,6 +322,8 @@ server <- function(input, output) {
                        <source src="Parlez-Moi DAmour.mp3" type="audio/mpeg">
                        Your browser does not support the audio element. </audio>')
     )
+    
+    
    #### Post Modern Jukebox ####
     output$badguy <- renderUI(
         HTML('<iframe width="560" height="315" 
@@ -219,12 +333,24 @@ server <- function(input, output) {
         gyroscope; picture-in-picture" allowfullscreen></iframe>')
     )
     
+    output$badguyaudio <- renderUI(
+        HTML('<audio controls>
+                       <source src="Bad Guy - Billie Eilish (Tango Style Cover) ft. Ariana Savalas.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
     output$badRomance <- renderUI(
         HTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/VCTOpdlZJ8U" 
              title="YouTube video player" frameborder="0" allow="accelerometer; 
              autoplay; clipboard-write; encrypted-media; gyroscope; 
              picture-in-picture" allowfullscreen></iframe>')
     )
+    output$badromanceaudio <- renderUI(
+        HTML('<audio controls>
+                       <source src="Bad Romance - Vintage 1920s Gatsby Style Lady Gaga Cover ft. Ariana Savalas  Sarah Reich.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
     
     output$smoothCriminal <- renderUI(
         HTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/cRRJIUI6-tY" 
@@ -233,12 +359,46 @@ server <- function(input, output) {
              picture-in-picture" allowfullscreen></iframe>')
     )
     
+    output$smoothcriminalaudio <- renderUI(
+        HTML('<audio controls>
+                       <source src="Smooth Criminal - Michael Jackson (Film Noir Style Cover) ft. Aubrey Logan.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    
     output$ganstaParadise <- renderUI(
         HTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/Rve03u7oEvI" 
              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
              clipboard-write; encrypted-media; gyroscope; 
              picture-in-picture" allowfullscreen></iframe>')
     )
+    
+    output$gangstasaudio <- renderUI(
+        HTML('<audio controls>
+                       <source src="Gangstas Paradise - Vintage 1920s Al Capone Style Coolio Cover ft. Robyn Adele Anderson.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    
+    output$beautifulaudio <- renderUI(
+        HTML('<audio controls>
+                       <source src="Beautiful - Christina Aguilera (Jazz Cover) ft. Martina DaSilva.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$dancingqueenaudio <- renderUI(
+        HTML('<audio controls>
+                       <source src="Dancing Queen - Abba (1920s Hot Jazz Cover) ft. Gunhild Carling.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$dancingwithmyselfaudio <- renderUI(
+        HTML('<audio controls>
+                       <source src="Dancing With Myself - Billy Idol (Postmodern Jukebox Cover) ft. Chloe Feoranzo.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    
     
     ####youtube####
     output$django1 <- renderUI(
@@ -285,6 +445,117 @@ server <- function(input, output) {
              picture-in-picture" allowfullscreen></iframe>')
     )
     
+    output$nakenTangoAudio <- renderUI(
+        HTML('<audio controls>
+                       <source src="Naked Tango Audio.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$josephonebaker1 <- renderUI(
+        HTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/jEH6eDpjgRw" 
+             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+             picture-in-picture" allowfullscreen></iframe>')
+    )
+    
+    output$josephonebaker2 <- renderUI(
+        HTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/NqFqpAAP94A" 
+             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+             picture-in-picture" allowfullscreen></iframe>')
+    )
+    
+    output$josephonebaker3 <- renderUI(
+        HTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/-K0DuHtWCig" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+             picture-in-picture" allowfullscreen></iframe>')
+    )
+    
+    
+    
+    
+    ####Paris Tango####
+    output$paristango2 <- renderUI(
+        HTML('<audio controls>
+                       <source src="Paris_Tango-02.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$paristango3 <- renderUI(
+        HTML('<audio controls>
+                       <source src="Paris_Tango-03.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$paristango4 <- renderUI(
+        HTML('<audio controls>
+                       <source src="Paris_Tango-04.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$paristango5 <- renderUI(
+        HTML('<audio controls>
+                       <source src="Paris_Tango-05.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$paristango6 <- renderUI(
+        HTML('<audio controls>
+                       <source src="Paris_Tango-06.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$paristango7 <- renderUI(
+        HTML('<audio controls>
+                       <source src="Paris_Tango-07.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$paristango8 <- renderUI(
+        HTML('<audio controls>
+                       <source src="Paris_Tango-08.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$paristango9 <- renderUI(
+        HTML('<audio controls>
+                       <source src="Paris_Tango-09.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$paristango10 <- renderUI(
+        HTML('<audio controls>
+                       <source src="Paris_Tango-10.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$paristango11 <- renderUI(
+        HTML('<audio controls>
+                       <source src="Paris_Tango-11.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$paristango12 <- renderUI(
+        HTML('<audio controls>
+                       <source src="Paris_Tango-12.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$paristango13 <- renderUI(
+        HTML('<audio controls>
+                       <source src="Paris_Tango-13.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$paristango14 <- renderUI(
+        HTML('<audio controls>
+                       <source src="Paris_Tango-14.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$paristango15 <- renderUI(
+        HTML('<audio controls>
+                       <source src="Paris_Tango-15.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
     
     
     ####original music####
@@ -305,6 +576,30 @@ server <- function(input, output) {
     output$demo2 <- renderUI(
         HTML('<audio controls>
                        <source src="Ring Around Moon Demo2.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$demo3 <- renderUI(
+        HTML('<audio controls>
+                       <source src="Ring Around Saturn.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$demo3b <- renderUI(
+        HTML('<audio controls>
+                       <source src="Ring Around Saturn Piano Mix.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$demo4 <- renderUI(
+        HTML('<audio controls>
+                       <source src="Ring Around Neptune.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$demo5 <- renderUI(
+        HTML('<audio controls>
+                       <source src="Ring Around Pluto Piano Version.mp3" type="audio/mpeg">
                        Your browser does not support the audio element. </audio>')
     )
     

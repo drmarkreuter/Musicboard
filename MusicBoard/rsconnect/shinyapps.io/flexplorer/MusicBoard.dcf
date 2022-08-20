@@ -1,0 +1,13 @@
+name: MusicBoard
+title: MusicBoard
+username:
+account: flexplorer
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6616696
+bundleId: 6212127
+url: https://abominable.shinyapps.io/MusicBoard/
+when: 1660777952.12249
+lastSyncTime: 1660777952.12251
+asMultiple: FALSE
+asStatic: FALSE
