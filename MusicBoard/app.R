@@ -189,12 +189,12 @@ ui <- navbarPage(theme = shinytheme("slate"),
                                                )#fluidRow end
                                                
                                       ),#tab panel end
-                                      #### Producion Tracks GUI ####
+                                      #### Production Tracks GUI ####
                                       tabPanel(tags$h3("Production Tracks"),
                                                fluidRow(
                                                    column(6,
-                                                          HTML("<h3>title</h3>"),
-                                                          uiOutput("pffgd"),
+                                                          HTML("<h3>Orchestra Rio Rita (diretta dal maestro Michele Ortuso) - Dos lagrimas (Ortuso)</h3>"),
+                                                          uiOutput("doslagrimas"),
                                                           hr()
                                                    ),
                                                    column(6,
@@ -600,6 +600,13 @@ server <- function(input, output) {
     output$demo5 <- renderUI(
         HTML('<audio controls>
                        <source src="Ring Around Pluto Piano Version.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    #### Production Tracks ####
+    output$doslagrimas <- renderUI(
+        HTML('<audio controls>
+                       <source src="Orchestra Rio Rita (diretta dal maestro Michele Ortuso) - Dos lagrimas (Ortuso) [Cetra AA 474].mp3" type="audio/mpeg">
                        Your browser does not support the audio element. </audio>')
     )
     
