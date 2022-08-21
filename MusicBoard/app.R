@@ -189,6 +189,65 @@ ui <- navbarPage(theme = shinytheme("slate"),
                                                )#fluidRow end
                                                
                                       ),#tab panel end
+                                      #### Piccadilly Dance Orchestra ####
+                                      tabPanel(tags$h3("Picadilly Dance Orchestra"),
+                                               fluidRow(
+                                                   column(6,
+                                                          HTML("<h3>My Baby Just Cares for Me</h3>"),
+                                                          uiOutput("piccadilly1"),
+                                                          hr(),
+                                                          HTML("<h3>There’s a Lull in My Life (feat. Louise Cookman)</h3>"),
+                                                          uiOutput("piccadilly2"),
+                                                          hr(),
+                                                          HTML("<h3>Washing Dishes with My Sweetie (feat. Martin Wheatley)</h3>"),
+                                                          uiOutput("piccadilly3"),
+                                                          hr(),
+                                                          HTML("<h3>The Moon Got in My Eyes (feat. Karla Beare)</h3>"),
+                                                          uiOutput("piccadilly4"),
+                                                          hr(),
+                                                          HTML("<h3>Swing for Sale (feat. Colin Good)</h3>"),
+                                                          uiOutput("piccadilly5"),
+                                                          hr(),
+                                                          HTML("<h3>Life Is Just a Bowl of Cherries (feat. The Three Bright Sparks  Martin Wheatley)</h3>"),
+                                                          uiOutput("piccadilly6"),
+                                                          hr(),
+                                                          HTML("<h3>Marahuana (feat. Karla Beare)</h3>"),
+                                                          uiOutput("piccadilly7"),
+                                                          hr(),
+                                                          
+                                                          
+                                                   ),
+                                                   column(6,
+                                                          HTML("<h3>Ever Since I Kissed Her on the Volga</h3>"),
+                                                          uiOutput("piccadilly8"),
+                                                          hr(),
+                                                          HTML("<h3>If I Could Be with You (feat. Louise Cookman)</h3>"),
+                                                          uiOutput("piccadilly9"),
+                                                          hr(),
+                                                          HTML("<h3>Sweet Sue, Just You</h3>"),
+                                                          uiOutput("piccadilly10"),
+                                                          hr(),
+                                                          HTML("<h3>That Old Feeling (feat. Karla Beare)</h3>"),
+                                                          uiOutput("piccadilly11"),
+                                                          hr(),
+                                                          HTML("<h3>Tea for Two (feat. Sophie Evans)</h3>"),
+                                                          uiOutput("piccadilly12"),
+                                                          hr(),
+                                                          HTML("<h3>When Youre Smiling (feat. The Three Bright Sparks)</h3>"),
+                                                          uiOutput("piccadilly13"),
+                                                          hr(),
+                                                          HTML("<h3>Blonde Women (feat. Karla Beare)</h3>"),
+                                                          uiOutput("piccadilly14"),
+                                                          hr(),
+                                                          
+                                                   ),
+                                                   hr(),
+                                                   HTML("<h3>YouTube playlist</h3>"),
+                                                   uiOutput("piccadillyPlaylist"),
+                                                   hr()
+                                               )#fluidRow end
+                                               
+                                      ),#tab panel end
                                       #### Production Tracks GUI ####
                                       tabPanel(tags$h3("Production Tracks"),
                                                fluidRow(
@@ -603,12 +662,112 @@ server <- function(input, output) {
                        Your browser does not support the audio element. </audio>')
     )
     
+    #### Piccadilly Dance Orchestra ####
+    
+    output$piccadilly1 <- renderUI(
+        HTML('<audio controls>
+                       <source src="PiccadillyDanceOrch-1-My Baby Just Cares for Me.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$piccadilly2 <- renderUI(
+        HTML('<audio controls>
+                       <source src="PiccadillyDanceOrch-2-There’s a Lull in My Life (feat. Louise Cookman).mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$piccadilly3 <- renderUI(
+        HTML('<audio controls>
+                       <source src="PiccadillyDanceOrch-3-Washing Dishes with My Sweetie (feat. Martin Wheatley).mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$piccadilly4 <- renderUI(
+        HTML('<audio controls>
+                       <source src="PiccadillyDanceOrch-4-The Moon Got in My Eyes (feat. Karla Beare).mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$piccadilly5 <- renderUI(
+        HTML('<audio controls>
+                       <source src="PiccadillyDanceOrch-5-Swing for Sale (feat. Colin Good).mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$piccadilly6 <- renderUI(
+        HTML('<audio controls>
+                       <source src="PiccadillyDanceOrch-6-Life Is Just a Bowl of Cherries (feat. The Three Bright Sparks  Martin Wheatley).mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$piccadilly7 <- renderUI(
+        HTML('<audio controls>
+                       <source src="PiccadillyDanceOrch-7-Marahuana (feat. Karla Beare).mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$piccadilly8 <- renderUI(
+        HTML('<audio controls>
+                       <source src="PiccadillyDanceOrch-8-Ever Since I Kissed Her on the Volga.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$piccadilly9 <- renderUI(
+        HTML('<audio controls>
+                       <source src="PiccadillyDanceOrch-9-If I Could Be with You (feat. Louise Cookman).mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$piccadilly10 <- renderUI(
+        HTML('<audio controls>
+                       <source src="PiccadillyDanceOrch-10-Sweet Sue, Just You.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$piccadilly11 <- renderUI(
+        HTML('<audio controls>
+                       <source src="PiccadillyDanceOrch-11-That Old Feeling (feat. Karla Beare).mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$piccadilly12 <- renderUI(
+        HTML('<audio controls>
+                       <source src="PiccadillyDanceOrch-12-Tea for Two (feat. Sophie Evans).mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$piccadilly13 <- renderUI(
+        HTML('<audio controls>
+                       <source src="PiccadillyDanceOrch-13-When Youre Smiling (feat. The Three Bright Sparks).mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$piccadilly14 <- renderUI(
+        HTML('<audio controls>
+                       <source src="PiccadillyDanceOrch-14-Blonde Women (feat. Karla Beare).mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$piccadillyPlaylist <- renderUI(
+        HTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=OLAK5uy_m7IJLWn-paMoOg2fqQmAdKMt0qqoadSeU" 
+             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+             picture-in-picture" allowfullscreen></iframe>')
+    )
+    
+    
+    
+    
     #### Production Tracks ####
     output$doslagrimas <- renderUI(
         HTML('<audio controls>
                        <source src="Orchestra Rio Rita (diretta dal maestro Michele Ortuso) - Dos lagrimas (Ortuso) [Cetra AA 474].mp3" type="audio/mpeg">
                        Your browser does not support the audio element. </audio>')
     )
+    
+    
+    
+    
+    
     
 }
 
