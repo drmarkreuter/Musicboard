@@ -96,6 +96,16 @@ ui <- navbarPage(theme = shinytheme("slate"),
                                                ),
                                       #### YouTube Assorted GUI ####
                                       tabPanel(tags$h3("YouTube - assorted"),
+                                               
+                                               HTML("<h3>Ne me quitte pas - Nina Simone</h3>"),
+                                               uiOutput("ninasimone"),
+                                               hr(),
+                                               
+                                               HTML("<h3>The Singleman Party Foxtrot from The Graduate</h3>"),
+                                               uiOutput("singlemanfoxtrot"),
+                                               hr(),
+                                               
+                                               
                                                HTML("<h3>Django Reinhardt - The Best Of Django Reinhardt</h3>"),
                                                uiOutput("django1"),
                                                hr(),
@@ -191,11 +201,23 @@ ui <- navbarPage(theme = shinytheme("slate"),
                                       ),#tab panel end
                                       #### Piccadilly Dance Orchestra ####
                                       tabPanel(tags$h3("Picadilly Dance Orchestra"),
+                                               HTML("<h2>Instrumentals</h2>"),
                                                fluidRow(
                                                    column(6,
                                                           HTML("<h3>My Baby Just Cares for Me</h3>"),
                                                           uiOutput("piccadilly1"),
-                                                          hr(),
+                                                          hr()
+                                                          ),
+                                                   column(6,
+                                                          HTML("<h3>Sweet Sue, Just You</h3>"),
+                                                          uiOutput("piccadilly10"),
+                                                          hr()
+                                                          )
+                                               ),
+                                               hr(),
+                                               HTML("<h2>Songs</h2>"),
+                                               fluidRow(
+                                                   column(6,
                                                           HTML("<h3>There’s a Lull in My Life (feat. Louise Cookman)</h3>"),
                                                           uiOutput("piccadilly2"),
                                                           hr(),
@@ -223,9 +245,6 @@ ui <- navbarPage(theme = shinytheme("slate"),
                                                           hr(),
                                                           HTML("<h3>If I Could Be with You (feat. Louise Cookman)</h3>"),
                                                           uiOutput("piccadilly9"),
-                                                          hr(),
-                                                          HTML("<h3>Sweet Sue, Just You</h3>"),
-                                                          uiOutput("piccadilly10"),
                                                           hr(),
                                                           HTML("<h3>That Old Feeling (feat. Karla Beare)</h3>"),
                                                           uiOutput("piccadilly11"),
@@ -264,8 +283,72 @@ ui <- navbarPage(theme = shinytheme("slate"),
                                                    )
                                                )#fluidRow end
                                                
-                                      )#tab panel end
+                                      ),#tab panel end
                                       
+                                      #### Waltz Foxtrot Polka GUI ####
+                                      tabPanel(tags$h3("Waltz Foxtrot Polka"),
+                                               fluidRow(
+                                                   column(6,
+                                                          HTML("<h3>Falling in Love Again - Piccadilly Dance Orchestra</h3>"),
+                                                          uiOutput("fallingPDO"),
+                                                          hr()
+                                                   ),
+                                                   column(6,
+                                                          # HTML("<h3>Track 2</h3>"),
+                                                          # uiOutput("boum2"),
+                                                          # hr()
+                                                   )
+                                               )#fluidRow end
+                                               
+                                      ),#tab panel end
+                                      
+                                      #### French Band Tracks GUI ####
+                                      tabPanel(tags$h3("Stash's French Band"),
+                                               fluidRow(
+                                                   column(6,
+                                                          HTML("<h3>Track 1</h3>"),
+                                                          uiOutput("boum1"),
+                                                          hr(),
+                                                          HTML("<h3>Track 3</h3>"),
+                                                          uiOutput("boum3"),
+                                                          hr(),
+                                                          HTML("<h3>Track 5</h3>"),
+                                                          uiOutput("boum5"),
+                                                          hr(),
+                                                          HTML("<h3>Track 7</h3>"),
+                                                          uiOutput("boum7"),
+                                                          hr(),
+                                                          HTML("<h3>Track 9</h3>"),
+                                                          uiOutput("boum9"),
+                                                          hr(),
+                                                          HTML("<h3>Track 11</h3>"),
+                                                          uiOutput("boum11"),
+                                                          hr()
+                                                   ),
+                                                   column(6,
+                                                          HTML("<h3>Track 2</h3>"),
+                                                          uiOutput("boum2"),
+                                                          hr(),
+                                                          HTML("<h3>Track 4</h3>"),
+                                                          uiOutput("boum4"),
+                                                          hr(),
+                                                          HTML("<h3>Track 6</h3>"),
+                                                          uiOutput("boum6"),
+                                                          hr(),
+                                                          HTML("<h3>Track 8</h3>"),
+                                                          uiOutput("boum8"),
+                                                          hr(),
+                                                          HTML("<h3>Track 10</h3>"),
+                                                          uiOutput("boum10"),
+                                                          hr(),
+                                                          HTML("<h3>Track 12</h3>"),
+                                                          uiOutput("boum12"),
+                                                          hr()
+                                                          
+                                                   )
+                                               )#fluidRow end
+                                               
+                                      )#tab panel end
                                       
                                       
                                       
@@ -460,6 +543,22 @@ server <- function(input, output) {
     
     
     ####youtube####
+    
+    output$ninasimone <- renderUI(
+        HTML('<audio controls>
+                       <source src="Ne me quitte pas - Nina Simone.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$singlemanfoxtrot <- renderUI(
+        HTML('<audio controls>
+                       <source src="The Singleman Party Foxtrot.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    
+    
+    
     output$django1 <- renderUI(
         HTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/QVAD6VPIPSs" 
              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
@@ -754,7 +853,84 @@ server <- function(input, output) {
              picture-in-picture" allowfullscreen></iframe>')
     )
     
+    #### Waltz Polka Foxtrot ####
+    output$fallingPDO <- renderUI(
+        HTML('<audio controls><source src="Falling In Love Again - Piccadilly Dance Orchestra.mp3"
+        type="audio/mpeg"> Your browser does not support the audio element. </audio>')
+    )
     
+    #### boum tracks ####
+    output$boum1 <- renderUI(
+        HTML('<audio controls>
+                       <source src="boum Track 01.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$boum2 <- renderUI(
+        HTML('<audio controls>
+                       <source src="boum Track 02.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$boum3 <- renderUI(
+        HTML('<audio controls>
+                       <source src="boum Track 03.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$boum4 <- renderUI(
+        HTML('<audio controls>
+                       <source src="boum Track 04.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$boum5 <- renderUI(
+        HTML('<audio controls>
+                       <source src="boum Track 05.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$boum6 <- renderUI(
+        HTML('<audio controls>
+                       <source src="boum Track 06.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$boum7 <- renderUI(
+        HTML('<audio controls>
+                       <source src="boum Track 07.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$boum8 <- renderUI(
+        HTML('<audio controls>
+                       <source src="boum Track 08.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$boum9 <- renderUI(
+        HTML('<audio controls>
+                       <source src="boum Track 09.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$boum10 <- renderUI(
+        HTML('<audio controls>
+                       <source src="boum Track 10.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$boum11 <- renderUI(
+        HTML('<audio controls>
+                       <source src="boum Track 11.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$boum12 <- renderUI(
+        HTML('<audio controls>
+                       <source src="boum Track 12.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
     
     
     #### Production Tracks ####
