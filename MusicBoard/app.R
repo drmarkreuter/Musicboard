@@ -10,50 +10,108 @@ library(shinythemes)
 ui <- navbarPage(theme = shinytheme("slate"),
                  HTML("<h2>Musicboard - Ring Around the Moon</h2>"),
                  tabPanel(HTML("<h3>Library</h3>"),
+                          #### Waltz Foxtrot Polka GUI ####
                           tabsetPanel(type = "tabs",
-                                      tabPanel(tags$h3("World Music"),
-                                               fluidRow(
-                                                   column(6,
-                                                          HTML("<h3>Heimo by Accordion Tribe</h3>"),
-                                                          uiOutput("AccordionTribe"),
-                                                          hr(),
-                                                          HTML("<h3>Palo Santo by Asere</h3>"),
-                                                          uiOutput("Asere"),
-                                                          hr(),
-                                                          HTML("<h3>Na Kuslatu Se Mahrama Vihori by Divanhana</h3>"),
-                                                          uiOutput("Divanhana"),
-                                                          hr(),
-                                                          HTML("<h3>Andres Retamal by Muller & Makaroff</h3>"),
-                                                          uiOutput("AndresRetamal"),
-                                                          hr(),
-                                                          HTML("<h3>Toda una Vida by Malecon Social Club</h3>"),
-                                                          uiOutput("TodaunaVida"),
-                                                          hr(),
-                                                          
-                                                          
-                                                   ),
-                                                   column(6,
-                                                          HTML("<h3>Geomungo & Tango by Geomungo Factory</h3>"),
-                                                          uiOutput("Geomungo"),
-                                                          hr(),
-                                                          HTML("<h3>Con Toda Palabra by Lhasa</h3>"),
-                                                          uiOutput("ConToda"),
-                                                          hr(),
-                                                          HTML("<h3>Luna Rossa by Pietra Montecorvino</h3>"),
-                                                          uiOutput("LunaRossa"),
-                                                          hr(),
-                                                          HTML("<h3>Storm by Talisk</h3>"),
-                                                          uiOutput("Storm"),
-                                                          hr(),
-                                                          HTML("<h3>Un Dia Cualquiera by Silvana Estrada</h3>"),
-                                                          uiOutput("Cualquiera"),
-                                                          hr(),
-                                                          
-                                                   )
-                                               )#fluidRow end
-                                               
-                                               
+                                      tabPanel(tags$h3("Tea Dance"),
+                                      fluidRow(column(5,
+                                                      HTML("<h3>Django Reinhardt & Stephane Grappelli Tea For Two</h3>"),
+                                                      uiOutput("Teadance01"),
+                                                      hr(),
+                                                      HTML("<h3>Benny Goodman Sugar Foot Stomp</h3>"),
+                                                      uiOutput("Teadance02"),
+                                                      hr(),
+                                                      HTML("<h3>Jan Savitt & His Top Hatters Jersey Bounce</h3>"),
+                                                      uiOutput("Teadance03"),
+                                                      hr(),
+                                                      HTML("<h3>Artie Shaw Begin the Beguine (Foxtrot)</h3>"),
+                                                      uiOutput("Teadance04"),
+                                                      hr(),
+                                                      HTML("<h3>Jimmie Lunceford For Dancers Only</h3>"),
+                                                      uiOutput("Teadance05"),
+                                                      hr(),
+                                                      HTML("<h3>Lionel Hampton Flying Home</h3>"),
+                                                      uiOutput("Teadance06"),
+                                                      hr(),
+                                                      HTML("<h3>Artie Shaw Begin the Beguine (Foxtrot)</h3>"),
+                                                      uiOutput("Teadance12"),
+                                                      hr(),
+                                                      HTML("<h3>Glenn Miller A String of Pearls (Foxtrot)</h3>"),
+                                                      uiOutput("Teadance13"),
+                                                      hr(),
+                                                      uiOutput("teadanceYT")
+                                                      
+                                                      ),
+                                               column(7,
+                                                      HTML("<h3>Frankie Trumbauer, Bix Beiderbecke, Eddie Lang Singin' The Blues</h3>"),
+                                                      uiOutput("Teadance07"),
+                                                      hr(),
+                                                      HTML("<h3>Django Reinhardt & Stephane Grappelli The Lambeth Walk</h3>"),
+                                                      uiOutput("Teadance08"),
+                                                      hr(),
+                                                      HTML("<h3>Benny Goodman Trio China Boy</h3>"),
+                                                      uiOutput("Teadance09"),
+                                                      hr(),
+                                                      HTML("<h3>Django Reinhardt & Stephane Grappelli It Don't Mean A Thing (If It Ain't Got That Swing)</h3>"),
+                                                      uiOutput("Teadance10"),
+                                                      hr(),
+                                                      HTML("<h3>Bud Freeman Trio Three Little Words</h3>"),
+                                                      uiOutput("Teadance11"),
+                                                      hr(),
+                                                      HTML("<h3>Falling in Love Again (Waltz) - Piccadilly Dance Orchestra</h3>"),
+                                                      uiOutput("fallingPDO"),
+                                                      hr(),
+                                                      HTML("<h3>Glenn Miller Moonlight Serenade (Slow Foxtrot)</h3>"),
+                                                      uiOutput("Teadance14"),
+                                                      hr(),
+                                                      HTML("<h3>Sid Phillips Palais De Danse (Quickstep)</h3>"),
+                                                      uiOutput("Teadance15"),
+                                                      hr()
+                                                      )
+                                               )
                                       ),
+                                      # tabPanel(tags$h3("World Music"),
+                                      #          fluidRow(
+                                      #              column(6,
+                                      #                     HTML("<h3>Heimo by Accordion Tribe</h3>"),
+                                      #                     uiOutput("AccordionTribe"),
+                                      #                     hr(),
+                                      #                     HTML("<h3>Palo Santo by Asere</h3>"),
+                                      #                     uiOutput("Asere"),
+                                      #                     hr(),
+                                      #                     HTML("<h3>Na Kuslatu Se Mahrama Vihori by Divanhana</h3>"),
+                                      #                     uiOutput("Divanhana"),
+                                      #                     hr(),
+                                      #                     HTML("<h3>Andres Retamal by Muller & Makaroff</h3>"),
+                                      #                     uiOutput("AndresRetamal"),
+                                      #                     hr(),
+                                      #                     HTML("<h3>Toda una Vida by Malecon Social Club</h3>"),
+                                      #                     uiOutput("TodaunaVida"),
+                                      #                     hr(),
+                                      #                     
+                                      #                     
+                                      #              ),
+                                      #              column(6,
+                                      #                     HTML("<h3>Geomungo & Tango by Geomungo Factory</h3>"),
+                                      #                     uiOutput("Geomungo"),
+                                      #                     hr(),
+                                      #                     HTML("<h3>Con Toda Palabra by Lhasa</h3>"),
+                                      #                     uiOutput("ConToda"),
+                                      #                     hr(),
+                                      #                     HTML("<h3>Luna Rossa by Pietra Montecorvino</h3>"),
+                                      #                     uiOutput("LunaRossa"),
+                                      #                     hr(),
+                                      #                     HTML("<h3>Storm by Talisk</h3>"),
+                                      #                     uiOutput("Storm"),
+                                      #                     hr(),
+                                      #                     HTML("<h3>Un Dia Cualquiera by Silvana Estrada</h3>"),
+                                      #                     uiOutput("Cualquiera"),
+                                      #                     hr(),
+                                      #                     
+                                      #              )
+                                      #          )#fluidRow end
+                                      #          
+                                      #          
+                                      # ),
                                       tabPanel(tags$h3("Martynas"),
                                                HTML("<h3>Bizet Carmen - Habanera by Martynas</h3>"),
                                                uiOutput("Habanera"),
@@ -284,23 +342,7 @@ ui <- navbarPage(theme = shinytheme("slate"),
                                                )#fluidRow end
                                                
                                       ),#tab panel end
-                                      
-                                      #### Waltz Foxtrot Polka GUI ####
-                                      tabPanel(tags$h3("Waltz Foxtrot Polka"),
-                                               fluidRow(
-                                                   column(6,
-                                                          HTML("<h3>Falling in Love Again - Piccadilly Dance Orchestra</h3>"),
-                                                          uiOutput("fallingPDO"),
-                                                          hr()
-                                                   ),
-                                                   column(6,
-                                                          # HTML("<h3>Track 2</h3>"),
-                                                          # uiOutput("boum2"),
-                                                          # hr()
-                                                   )
-                                               )#fluidRow end
-                                               
-                                      ),#tab panel end
+                                    
                                       
                                       #### French Band Tracks GUI ####
                                       tabPanel(tags$h3("Stash's French Band"),
@@ -356,27 +398,30 @@ ui <- navbarPage(theme = shinytheme("slate"),
                  ),#Library tabpanel end
                  #### original music GUI ####
                  tabPanel(HTML("<h3>Original Music</h3>"),
-                          HTML("<h3>Demo 1</h3>"),
-                          uiOutput("demo1"),
+                          HTML("<h3>Ring Around the Moon Theme (Downton Mix)</h3>"),
+                          uiOutput("theme1"),
                           hr(),
-                          HTML("<h3>Demo 1 - accordion mix</h3>"),
-                          uiOutput("demo1b"),
-                          hr(),
-                          HTML("<h3>Demo 2</h3>"),
-                          uiOutput("demo2"),
-                          hr(),
-                          HTML("<h3>Demo 3</h3>"),
-                          uiOutput("demo3"),
-                          hr(),
-                          HTML("<h3>Demo 3 - piano mix</h3>"),
-                          uiOutput("demo3b"),
-                          hr(),
-                          HTML("<h3>Demo 4</h3>"),
-                          uiOutput("demo4"),
-                          hr(),
-                          HTML("<h3>Demo 5</h3>"),
-                          uiOutput("demo5"),
-                          hr()
+                          # HTML("<h3>Demo 1</h3>"),
+                          # uiOutput("demo1"),
+                          # hr(),
+                          # HTML("<h3>Demo 1 - accordion mix</h3>"),
+                          # uiOutput("demo1b"),
+                          # hr(),
+                          # HTML("<h3>Demo 2</h3>"),
+                          # uiOutput("demo2"),
+                          # hr(),
+                          # HTML("<h3>Demo 3</h3>"),
+                          # uiOutput("demo3"),
+                          # hr(),
+                          # HTML("<h3>Demo 3 - piano mix</h3>"),
+                          # uiOutput("demo3b"),
+                          # hr(),
+                          # HTML("<h3>Demo 4</h3>"),
+                          # uiOutput("demo4"),
+                          # hr(),
+                          # HTML("<h3>Demo 5</h3>"),
+                          # uiOutput("demo5"),
+                          # hr()
                           
                           
                           )
@@ -384,64 +429,64 @@ ui <- navbarPage(theme = shinytheme("slate"),
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
-    output$AccordionTribe <- renderUI(
-        HTML('<audio controls>
-                       <source src="Heimo.mp3" type="audio/mpeg">
-                       Your browser does not support the audio element. </audio>')
-    )
-    output$Asere <- renderUI(
-        HTML('<audio controls>
-                       <source src="Palo Santo.mp3" type="audio/mpeg">
-                       Your browser does not support the audio element. </audio>')
-    )
+    # output$AccordionTribe <- renderUI(
+    #     HTML('<audio controls>
+    #                    <source src="Heimo.mp3" type="audio/mpeg">
+    #                    Your browser does not support the audio element. </audio>')
+    # )
+    # output$Asere <- renderUI(
+    #     HTML('<audio controls>
+    #                    <source src="Palo Santo.mp3" type="audio/mpeg">
+    #                    Your browser does not support the audio element. </audio>')
+    # )
     
-    output$Divanhana <- renderUI(
-        HTML('<audio controls>
-                       <source src="Na Kuslatu Se Mahrama Vihori.mp3" type="audio/mpeg">
-                       Your browser does not support the audio element. </audio>')
-    )
+    # output$Divanhana <- renderUI(
+    #     HTML('<audio controls>
+    #                    <source src="Na Kuslatu Se Mahrama Vihori.mp3" type="audio/mpeg">
+    #                    Your browser does not support the audio element. </audio>')
+    # )
     
-    output$Geomungo <- renderUI(
-        HTML('<audio controls>
-                       <source src="Geomungo & Tango.mp3" type="audio/mpeg">
-                       Your browser does not support the audio element. </audio>')
-    )
+    # output$Geomungo <- renderUI(
+    #     HTML('<audio controls>
+    #                    <source src="Geomungo & Tango.mp3" type="audio/mpeg">
+    #                    Your browser does not support the audio element. </audio>')
+    # )
     
-    output$ConToda <- renderUI(
-        HTML('<audio controls>
-                       <source src="Con Toda Palabra.mp3" type="audio/mpeg">
-                       Your browser does not support the audio element. </audio>')
-    )
+    # output$ConToda <- renderUI(
+    #     HTML('<audio controls>
+    #                    <source src="Con Toda Palabra.mp3" type="audio/mpeg">
+    #                    Your browser does not support the audio element. </audio>')
+    # )
     
-    output$LunaRossa <- renderUI(
-        HTML('<audio controls>
-                       <source src="Luna Rossa.mp3" type="audio/mpeg">
-                       Your browser does not support the audio element. </audio>')
-    )
+    # output$LunaRossa <- renderUI(
+    #     HTML('<audio controls>
+    #                    <source src="Luna Rossa.mp3" type="audio/mpeg">
+    #                    Your browser does not support the audio element. </audio>')
+    # )
     
-    output$AndresRetamal <- renderUI(
-        HTML('<audio controls>
-                       <source src="Andrés Retamal.mp3" type="audio/mpeg">
-                       Your browser does not support the audio element. </audio>')
-    )
+    # output$AndresRetamal <- renderUI(
+    #     HTML('<audio controls>
+    #                    <source src="Andrés Retamal.mp3" type="audio/mpeg">
+    #                    Your browser does not support the audio element. </audio>')
+    # )
     
-    output$Storm <- renderUI(
-        HTML('<audio controls>
-                       <source src="Storm.mp3" type="audio/mpeg">
-                       Your browser does not support the audio element. </audio>')
-    )
+    # output$Storm <- renderUI(
+    #     HTML('<audio controls>
+    #                    <source src="Storm.mp3" type="audio/mpeg">
+    #                    Your browser does not support the audio element. </audio>')
+    # )
     
-    output$TodaunaVida <- renderUI(
-        HTML('<audio controls>
-                       <source src="Toda una Vida.mp3" type="audio/mpeg">
-                       Your browser does not support the audio element. </audio>')
-    )
+    # output$TodaunaVida <- renderUI(
+    #     HTML('<audio controls>
+    #                    <source src="Toda una Vida.mp3" type="audio/mpeg">
+    #                    Your browser does not support the audio element. </audio>')
+    # )
     
-    output$Cualquiera <- renderUI(
-        HTML('<audio controls>
-                       <source src="Un Dia Cualquiera.mp3" type="audio/mpeg">
-                       Your browser does not support the audio element. </audio>')
-    )
+    # output$Cualquiera <- renderUI(
+    #     HTML('<audio controls>
+    #                    <source src="Un Dia Cualquiera.mp3" type="audio/mpeg">
+    #                    Your browser does not support the audio element. </audio>')
+    # )
     
     ####Martynas####
     
@@ -718,48 +763,53 @@ server <- function(input, output) {
     
     ####original music####
     
-    
-    output$demo1 <- renderUI(
-        HTML('<audio controls>
-                       <source src="Ring Around Moon Demo1.mp3" type="audio/mpeg">
-                       Your browser does not support the audio element. </audio>')
+    output$theme1 <- renderUI(
+        HTML('<img src="ratm.png" width="300px"></img><br>
+        <audio controls><source src="Ring Around the Moon - DowntonMix02.mp3" type="audio/mpeg">
+        Your browser does not support the audio element. </audio>')
     )
     
-    output$demo1b <- renderUI(
-        HTML('<audio controls>
-                       <source src="Ring Around Moon Demo1 Accordion Mix.mp3" type="audio/mpeg">
-                       Your browser does not support the audio element. </audio>')
-    )
-    
-    output$demo2 <- renderUI(
-        HTML('<audio controls>
-                       <source src="Ring Around Moon Demo2.mp3" type="audio/mpeg">
-                       Your browser does not support the audio element. </audio>')
-    )
-    
-    output$demo3 <- renderUI(
-        HTML('<audio controls>
-                       <source src="Ring Around Saturn.mp3" type="audio/mpeg">
-                       Your browser does not support the audio element. </audio>')
-    )
-    
-    output$demo3b <- renderUI(
-        HTML('<audio controls>
-                       <source src="Ring Around Saturn Piano Mix.mp3" type="audio/mpeg">
-                       Your browser does not support the audio element. </audio>')
-    )
-    
-    output$demo4 <- renderUI(
-        HTML('<audio controls>
-                       <source src="Ring Around Neptune.mp3" type="audio/mpeg">
-                       Your browser does not support the audio element. </audio>')
-    )
-    
-    output$demo5 <- renderUI(
-        HTML('<audio controls>
-                       <source src="Ring Around Pluto Piano Version.mp3" type="audio/mpeg">
-                       Your browser does not support the audio element. </audio>')
-    )
+    # output$demo1 <- renderUI(
+    #     HTML('<audio controls>
+    #                    <source src="Ring Around Moon Demo1.mp3" type="audio/mpeg">
+    #                    Your browser does not support the audio element. </audio>')
+    # )
+    # 
+    # output$demo1b <- renderUI(
+    #     HTML('<audio controls>
+    #                    <source src="Ring Around Moon Demo1 Accordion Mix.mp3" type="audio/mpeg">
+    #                    Your browser does not support the audio element. </audio>')
+    # )
+    # 
+    # output$demo2 <- renderUI(
+    #     HTML('<audio controls>
+    #                    <source src="Ring Around Moon Demo2.mp3" type="audio/mpeg">
+    #                    Your browser does not support the audio element. </audio>')
+    # )
+    # 
+    # output$demo3 <- renderUI(
+    #     HTML('<audio controls>
+    #                    <source src="Ring Around Saturn.mp3" type="audio/mpeg">
+    #                    Your browser does not support the audio element. </audio>')
+    # )
+    # 
+    # output$demo3b <- renderUI(
+    #     HTML('<audio controls>
+    #                    <source src="Ring Around Saturn Piano Mix.mp3" type="audio/mpeg">
+    #                    Your browser does not support the audio element. </audio>')
+    # )
+    # 
+    # output$demo4 <- renderUI(
+    #     HTML('<audio controls>
+    #                    <source src="Ring Around Neptune.mp3" type="audio/mpeg">
+    #                    Your browser does not support the audio element. </audio>')
+    # )
+    # 
+    # output$demo5 <- renderUI(
+    #     HTML('<audio controls>
+    #                    <source src="Ring Around Pluto Piano Version.mp3" type="audio/mpeg">
+    #                    Your browser does not support the audio element. </audio>')
+    # )
     
     #### Piccadilly Dance Orchestra ####
     
@@ -795,7 +845,7 @@ server <- function(input, output) {
     
     output$piccadilly6 <- renderUI(
         HTML('<audio controls>
-                       <source src="PiccadillyDanceOrch-6-Life Is Just a Bowl of Cherries (feat. The Three Bright Sparks  Martin Wheatley).mp3" type="audio/mpeg">
+                       <source src="PiccadillyDanceOrch-6-Life Is Just a Bowl of Cherries.mp3" type="audio/mpeg">
                        Your browser does not support the audio element. </audio>')
     )
     
@@ -933,10 +983,94 @@ server <- function(input, output) {
     )
     
     
+    #### Tea dance ####
+    
+    output$Teadance01 <- renderUI(
+        HTML('<audio controls><source src="Teadance01.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$Teadance02 <- renderUI(
+        HTML('<audio controls><source src="Teadance02.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$Teadance03 <- renderUI(
+        HTML('<audio controls><source src="Teadance03.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$Teadance04 <- renderUI(
+        HTML('<audio controls><source src="Teadance04.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$Teadance05 <- renderUI(
+        HTML('<audio controls><source src="Teadance05.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$Teadance06 <- renderUI(
+        HTML('<audio controls><source src="Teadance06.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$Teadance07 <- renderUI(
+        HTML('<audio controls><source src="Teadance07.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$Teadance08 <- renderUI(
+        HTML('<audio controls><source src="Teadance08.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$Teadance09 <- renderUI(
+        HTML('<audio controls><source src="Teadance09.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$Teadance10 <- renderUI(
+        HTML('<audio controls><source src="Teadance10.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$Teadance11 <- renderUI(
+        HTML('<audio controls><source src="Teadance11.mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$Teadance12 <- renderUI(
+        HTML('<audio controls><source src="Artie Shaw Begin the Beguine (Foxtrot).mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$Teadance13 <- renderUI(
+        HTML('<audio controls><source src="Glenn Miller A String of Pearls (Foxtrot).mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$Teadance14 <- renderUI(
+        HTML('<audio controls><source src="Glenn Miller Moonlight Serenade (Slow Foxtrot).mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    output$Teadance15 <- renderUI(
+        HTML('<audio controls><source src="Sid Phillips Palais De Danse (Quickstep).mp3" type="audio/mpeg">
+                       Your browser does not support the audio element. </audio>')
+    )
+    
+    
+    output$teadanceYT <- renderUI(
+        HTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/9jwPqDVtsTU" 
+             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+             encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+    )
+    
+    
     #### Production Tracks ####
     output$doslagrimas <- renderUI(
-        HTML('<audio controls>
-                       <source src="Orchestra Rio Rita (diretta dal maestro Michele Ortuso) - Dos lagrimas (Ortuso) [Cetra AA 474].mp3" type="audio/mpeg">
+        HTML('<audio controls><source src="Orchestra Rio Rita (diretta dal maestro Michele Ortuso) - Dos lagrimas.mp3" type="audio/mpeg">
                        Your browser does not support the audio element. </audio>')
     )
     
